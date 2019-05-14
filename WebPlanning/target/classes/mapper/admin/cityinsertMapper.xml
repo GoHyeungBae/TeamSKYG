@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "plan.cityMapper">
+
+<!-- 도시 등록 -->
+
+	<insert id = "insertCity">
+	INSERT INTO
+		city_tbl(city_code, city_name, city_country, city_local, city_image)
+	VALUES
+		(#{city_code}, #{city_name}, #{city_country}, #{city_local}, #{city_image})
+	
+	</insert>
+
+</mapper>

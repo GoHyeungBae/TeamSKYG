@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plan.eatInfoMapper">
+<!-- 자바클래스에서 maper 를 찾는 경로 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+	
+	<!-- 식당 정보등록-->
+	<insert id="insertEatInfo">
+		INSERT INTO 
+			eat_info_tbl(eat_code, eat_name, eat_local, eat_report,
+			eat_time, eat_phone, eat_page, eat_image, city_code)
+		VALUES
+			(#{eat_code}, #{eat_name}, #{eat_local}, #{eat_report},
+			 #{eat_time}, #{eat_phone}, #{eat_page}, #{eat_image}, #{city_code})
+	</insert>
+	
+</mapper>
