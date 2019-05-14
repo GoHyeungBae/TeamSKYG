@@ -54,4 +54,12 @@ public class HomeController {
 		return mv;
 	}
 	
+	// 국가 및 도시 InsertForm
+	@RequestMapping(value = "/cityF")
+	public ModelAndView locationAdmin(ModelAndView mv) {
+		mv.setViewName("adminForm/cityAdminForm");
+		return mv;
+	}
+
+	
 }
