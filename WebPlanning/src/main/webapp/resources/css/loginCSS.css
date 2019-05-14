@@ -1,0 +1,7 @@
+#loginBtn, #logoutBtn {
+	width: 126px;
+	height: 64px;
+	float: left;
+	background: #129994;
+	cursor: pointer;
+}
