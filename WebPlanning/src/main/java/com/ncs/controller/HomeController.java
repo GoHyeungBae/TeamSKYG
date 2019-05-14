@@ -60,6 +60,12 @@ public class HomeController {
 		mv.setViewName("adminForm/cityAdminForm");
 		return mv;
 	}
-
+	
+	// 관리자 식당 정보등록 화면
+	@RequestMapping(value = "/eatInfoF")
+	public ModelAndView eatInfof(ModelAndView mv) {
+		mv.setViewName("adminForm/eatInfoForm"); 
+		return mv;
+	}
 	
 }
