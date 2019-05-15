@@ -54,17 +54,31 @@ public class HomeController {
 		return mv;
 	}
 	
-	// 국가 및 도시 InsertForm
+	// 관리자 국가 및 도시 입력
 	@RequestMapping(value = "/cityF")
 	public ModelAndView locationAdmin(ModelAndView mv) {
 		mv.setViewName("adminForm/cityAdminForm");
 		return mv;
 	}
 	
-	// 관리자 식당 정보등록 화면
+	// 관리자 식당 정보 입력
 	@RequestMapping(value = "/eatInfoF")
 	public ModelAndView eatInfof(ModelAndView mv) {
 		mv.setViewName("adminForm/eatInfoForm"); 
+		return mv;
+	}
+	
+	// 관리자 숙박 정보 입력 
+	@RequestMapping(value = "/roomF")
+	public ModelAndView roomF(ModelAndView mv) {
+		mv.setViewName("adminForm/roomForm"); 
+		return mv;
+	}
+	
+	// 관리자 관광지 정보 입력
+	@RequestMapping(value = "/tourF")
+	public ModelAndView tourF(ModelAndView mv) {
+		mv.setViewName("adminForm/tourForm");
 		return mv;
 	}
 	

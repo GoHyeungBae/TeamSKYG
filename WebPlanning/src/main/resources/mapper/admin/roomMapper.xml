@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plan.roomMapper">
+<!-- 자바클래스에서 maper 를 찾는 경로 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+	
+	<!-- 도시코드 받아오기  -->
+	<select id="select_cityCode" resultType="com.ncs.vo.RoomVO">
+		SELECT 
+			city_code
+		FROM
+			city_tbl
+	</select>
+	  
+	<!-- 숙박 업체 등록 하기  -->
+	<insert id="insertRoom">
+		INSERT INTO 
+			room_info_tbl(room_code, room_name, room_local, room_report, room_in, room_out, room_price, room_image, city_code)
+		VALUES
+			(#{room_code}, #{room_name}, #{room_local}, #{room_report}, #{room_in}, #{room_out}, #{room_price}, #{room_image}, #{city_code})
+	</insert>
+	 <!-- 숙소 코드 = code // 숙소 위치 = local // 도시 코드 =  code  -->
+	 
+	
+	  
+	
+</mapper>
