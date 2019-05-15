@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plan.tourMapper">
+<!-- 자바클래스에서 maper 를 찾는 경로 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+	
+	<!-- 도시코드 받아오기  -->
+	<select id="select_cityCode" resultType="com.ncs.vo.TourVO">
+		SELECT 
+			city_code
+		FROM
+			city_tbl
+	</select>
+	  
+	<!-- 관광지 등록 하기  -->
+	<insert id="insertTour">
+		INSERT INTO 
+			tour_info_tbl(tour_code, tour_name, tour_local, tour_report, tour_time, tour_phone, tour_page, tour_image, city_code)
+		VALUES
+			(#{tour_code}, #{tour_name}, #{tour_local}, #{tour_report}, #{tour_time}, #{tour_phone}, #{tour_page}, #{tour_image}, #{city_code})
+	</insert>
+	 
+	 
+	
+	  
+	
+</mapper>
