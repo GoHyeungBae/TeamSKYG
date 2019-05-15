@@ -15,7 +15,7 @@
 		<property name="username" value="gksy"/>
 		<property name="password" value="gksy3222"/>
 	</bean>
-	
+	  
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 	  	<!-- MyBatis 설정 파일의 위치를 지정  : 스프링 동작시 같이 동작 하도록 -->
